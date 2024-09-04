@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Maven Pro", sans-serif;
+}
+
+.home-body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #ffff;
+}
+
+.home-main {
+    padding: 20px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: repeating-linear-gradient(#088395 0%, #1B6284 47%, #2E4374 100%);
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: relative;
+    transition: all 0.5s;
+    min-width: 82px;
+}
+
+#sidebar_content {
+    padding: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#logo_economy {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#logo__economy {
+    align-items: center;
+    width: 120px;
+    height: 130px;
+    object-fit: cover;
+    margin-top: 20px;
+    
+}
+
+#name_fintech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+}
+    
+.name__one {
+    color: #FEFEFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);   
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: -18px;
+}
+
+.name__fintech__two{
+    color: #FEFEFF;
+    letter-spacing: 2px;
+    font-size: 15px;
+    line-height: 0.8;
+}
+
+#side_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.side-item.active {
+    background-color: #fefeff;
+}
+
+.side-item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #d3d3d31f;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fefeff;
+    font-size:20px;
+}
+
+.side-item.active a {
+    color: #088395;
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.side-item a:focus {
+    outline: none;
+}
+
+.side-item a:hover {
+    background-color: transparent;
+}
+
+#logout {
+    border-top: 1px solid #fefeff;
+    padding: 12px;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fefeff;
+}
+
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #ffffff;
+    color: #2c2c318b;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+#open_btn_icon {
+    transition: transform 0.3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+.form-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(#088395 0%, #1B6284 47%, #2E4374 100%);;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 0px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    background-color: #f9f9f9;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+}
+
+form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+form-image img {
+    width: 31rem;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffff;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #088395;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #088395;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #088395;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #088295d5;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login-button-one {
+    margin-top: 0.4rem;
+    display: flex;
+    margin-left: 9.5rem;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    margin-left: 18.5rem;
+    position: relative;
+    top: 22px;
+}
+
+.login-button button {
+    border: none;
+    background-color: transparent;
+    border-radius: none;
+    cursor: pointer;   
+}
+
+.login-button button a {
+    font-weight: 500;
+    color: #088395;
+}
+
+@media  screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .input-group::-webkit-scrollbar {
+        height: 10px;
+        width: 10px;
+    }
+    .input-group::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: #DFE9EB;
+      }
+      
+    .input-group::-webkit-scrollbar-track:hover {
+        background-color: #B8C0C2;
+      }
+      
+    .input-group::-webkit-scrollbar-track:active {
+        background-color: #B8C0C2;
+      }
+      
+    .input-group::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #088395;
+      }
+      
+    .input-group::-webkit-scrollbar-thumb:hover {
+        background-color: #088295b3;
+      }
+      
+    .input-group::-webkit-scrollbar-thumb:active {
+        background-color: #08829551;
+      }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group{
+        flex-direction: column;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+    .login-button-one {
+        margin-top: 0.9rem;
+        display: flex;
+        margin-left: 3rem; 
+    }
+    .login-button {
+        display: flex;
+        align-items: center;
+        margin-left: 12.1rem;
+        position: relative;
+        top: 31px;
+    }
+}
