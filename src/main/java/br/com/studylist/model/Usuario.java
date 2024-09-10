@@ -8,12 +8,13 @@ public class Usuario {
 	private String email;
 	private String celular;
 	private String genero;
+	private String senha;
 	
 	public Usuario() {
 		super();
 	}
 
-	public Usuario(int id, String nome, String sobrenome, String email, String celular, String genero) {
+	public Usuario(int id, String nome, String sobrenome, String email, String celular, String genero, String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -21,6 +22,7 @@ public class Usuario {
 		this.email = email;
 		this.celular = celular;
 		this.genero = genero;
+		this.senha = senha;
 	}
 
 	public int getId() {
@@ -70,6 +72,15 @@ public class Usuario {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
 	
 
 }

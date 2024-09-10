@@ -1,5 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -24,21 +27,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>João</td>
-                        <td>Silva</td>
-                        <td>joao.silva@example.com</td>
-                        <td>(11) 98765-4321</td>
-                        <td>Masculino</td>
-                    </tr>
-                    <tr>
-                        <td>Maria</td>
-                        <td>Santos</td>
-                        <td>maria.santos@example.com</td>
-                        <td>(21) 97654-3210</td>
-                        <td>Feminino</td>
-                    </tr>
-                    <!-- Adicione mais linhas conforme necessário -->
+                
+                <c:if test="${not empty usuarios }">
+	                <c:forEach var="u" items="${usuarios}"> 
+	                 <tr>
+	                        <td>${u.nome}</td>
+	                        <td>${u.sobrenome}</td>
+	                        <td>${u.email}</td>
+	                        <td>${u.celular}</td>
+	                        <td>${u.genero}</td>
+	                    </tr>
+	                
+	                
+	                </c:forEach>
+                </c:if>
+                
+                   
+                    
+
                 </tbody>
             </table>
         </div>
