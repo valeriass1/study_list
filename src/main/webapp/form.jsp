@@ -55,35 +55,35 @@
 				<div class="input-group">
 					<div class="input-box">
 						<label for="firstname">Nome</label> <input id="firstname"
-							type="text" name="nome"
+							type="text" name="nome" class="required"
 							placeholder="Digite seu primeiro nome" required>
 					</div>
 
 					<div class="input-box">
 						<label for="lastname">Sobrenome</label> <input id="lastname"
-							type="text" name="sobrenome" placeholder="Digite seu sobrenome"
+							type="text" class="required" name="sobrenome" placeholder="Digite seu sobrenome"
 							required>
 					</div>
 
 					<div class="input-box">
 						<label for="email">Email</label> <input id="email" type="email"
-							name="email" placeholder="Digite seu e-mail" required>
+							name="email" class="required" placeholder="Digite seu e-mail" required>
 					</div>
 
 					<div class="input-box">
 						<label for="number">Celular</label> <input id="number" type="tel"
-							name="celular" placeholder="(xx) xxxxx-xxxx" required>
+							name="celular" class="required" placeholder="(xx) xxxxx-xxxx" required>
 					</div>
 
 					<div class="input-box">
-						<label for="password">Senha</label> <input id="password"
-							type="password" name="senha" placeholder="Digite sua senha"
+						<label for="senha">Senha</label> <input id="senha"
+							type="password" class="required" name="senha" placeholder="Digite sua senha"
 							required>
 					</div>
 
 					<div class="input-box">
-						<label for="password">Confirme sua senha</label> <input
-							id="password" type="password" name="confirmpassword"
+						<label for="confirmSenha">Confirme sua senha</label> <input
+							id="confirmSenha" class="required" type="password" name="confirmacaosenha"
 							placeholder="Digite sua senha" required>
 					</div>
 				</div>
@@ -110,14 +110,14 @@
 						</div>
 
 						<div class="gender-input">
-							<input type="radio"  value="3" id="none" name="genero"> <label
+							<input type="radio" checked  value="3" id="none" name="genero"> <label
 								for="none">Prefiro não dizer</label>
 						</div>
 					</div>
 				</div>
 
 				<div class="continue-button">
-					<button onclick="document.getElementById('formulario').submit()">
+					<button onclick="cadastrar(event)">
 						<a href="#">Continuar</a>
 					</button>
 				</div>
@@ -134,5 +134,5 @@
 		</div>
 	</div>
 </body>
-
+    <script src="javascript/script.js"></script>
 </html>
